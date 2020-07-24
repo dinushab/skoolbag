@@ -16,20 +16,13 @@ export class AddSchoolComponent implements OnInit {
   school: School;
   address: Address;
 
-  schoolName: string;
-  noOfStudents: number;
-  street: string;
-  postCode: string;
-  suburb: string;
-  state: string;
-
   form: FormGroup;
   formSubmitted = false;
 
   response: Response;
 
   constructor(private schoolService: SchoolService, private formBuilder: FormBuilder,
-    private toastr: ToastrService) { }
+              private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.buildForm();
@@ -56,14 +49,14 @@ export class AddSchoolComponent implements OnInit {
 
   save(): void {
     this.school = new School();
-    this.school.name = this.schoolName;
-    this.school.noOfStudents = this.noOfStudents;
+    this.school.name = this.form.get('schoolName').value;
+    this.school.noOfStudents = this.form.get('noOfStudents').value;
     this.address = new Address();
     this.school.address = this.address;
-    this.address.street = this.street;
-    this.address.postCode = this.postCode;
-    this.address.suburb = this.suburb;
-    this.address.state = this.state;
+    this.address.street = this.form.get('street').value;
+    this.address.postCode = this.form.get('postcode').value;
+    this.address.suburb = this.form.get('suburb').value;
+    this.address.state = this.form.get('state').value;
     this.schoolService.saveSchool(this.school).subscribe(response => {
       if ('SUCCESS' === response.status) {
         this.toastr.success('New School Added.');
