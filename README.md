@@ -58,4 +58,4 @@ Navigate to `skoolbag-frontend` folder from the command line in windows or the t
 
 	`docker run -d -p 8090:80 --restart always --name skoolbag-frontend skoolbag-frontend:v1`
 	
-Above command will initialize the frontend application and host port 8090 will be mapped to the running container so that poining to `http://localhost:8090` will open the application.
+Above command will initialize the frontend application in a docker container. The container port 80 will be mapped to host port 8090 so that poining to `http://localhost:8090` in the host will open the application.
