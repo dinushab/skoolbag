@@ -1,6 +1,9 @@
 # Skoolbag application
 
-This is a sample full stack implementation done for skoolbag. Two projects can be found in the repository, one for the backend written in Angular and a backend for this written in Java.
+This is a sample full stack implementation done for skoolbag. Two projects can be found in the repository;
+
+1. skoolbag-frontend 	- Frontend web application written in Angular
+2. skoolbag-backend	- Backend services written in Java spring boot
 
 ## Skoolbag-backend
 
@@ -9,7 +12,7 @@ Prerequisites to run the backend:
 2. Apache maven
 3. Docker
 
-Go to the command line in windows or to the terminal in Mac/Linux and run the following command.
+Navigate to `skoolbag-backend` folder from the command line in windows or the terminal in Mac/Linux and run the following command.
 
 	`mvn clean package -Pjib`
 	
@@ -25,13 +28,13 @@ This will initialize a server and the backend services will listen to the host p
 
 Running the front end.
 
-### Option 1
+#### Option 1
 
-Prerequisites to build and run the frontend
+Prerequisites to build and run the frontend:
 1. NodeJs
 2. Angular CLI
 
-Go to the command line in windows or to the terminal in Mac/Linux and navigate to skoolbag-frontend folder. 
+Navigate to `skoolbag-frontend` folder from the command line in windows or the terminal in Mac/Linux and navigate to skoolbag-frontend folder. 
 
 1. Run the following command to download the necessary dependencies
 	
@@ -41,11 +44,11 @@ Go to the command line in windows or to the terminal in Mac/Linux and navigate t
 	
 	`ng serve -o`
 
-### Option 2
-Prerequisites to build and run the frontend
+#### Option 2
+Prerequisites to build and run the frontend:
 1. Docker
 
-Go to the command line in windows or to the terminal in Mac/Linux and navigate to skoolbag-frontend folder. 
+Navigate to `skoolbag-frontend` folder from the command line in windows or the terminal in Mac/Linux and navigate to skoolbag-frontend folder. 
 
 1. Run the following command to generate the docker image.
 
