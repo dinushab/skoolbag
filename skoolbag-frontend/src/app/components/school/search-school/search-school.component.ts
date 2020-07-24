@@ -10,27 +10,27 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class SearchSchoolComponent implements OnInit {
 
-  searchSchoolName: string = '';
-  searchSchoolAddress: string  = '';
+  searchSchoolName = '';
+  searchSchoolAddress = '';
   schools: School;
 
-  formSubmitted = false;
+  formSubmitted = false;b
 
   constructor(private schoolService: SchoolService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
 
-  search() {
+  search(): void {
     this.schoolService.searchSchool(this.searchSchoolName, this.searchSchoolAddress)
       .subscribe(response => {
         this.schools = response;
       });
   }
 
-  onSubmit(event) {
-    event.preventDefault();    
-    if (this.searchSchoolName.length == 0 && this.searchSchoolAddress.length == 0) {
+  onSubmit(event): void {
+    event.preventDefault();
+    if (this.searchSchoolName.length === 0 && this.searchSchoolAddress.length === 0) {
       this.toastr.error('Please provide the school name and/or the address to do a search');
     } else {
       this.search();

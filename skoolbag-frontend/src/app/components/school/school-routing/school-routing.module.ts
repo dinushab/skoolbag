@@ -5,14 +5,9 @@ import { AddSchoolComponent } from '../add-school/add-school.component';
 import { SearchSchoolComponent } from '../search-school/search-school.component';
 
 const schoolRoutes: Routes = [
-  // {
-    // path: '',
-    // children:[
-      { path: 'list', component: ListSchoolsComponent },
-      { path: 'addschool', component: AddSchoolComponent },
-      { path: 'searchschool', component: SearchSchoolComponent }
-    // ]
-  // }
+  { path: 'list', component: ListSchoolsComponent },
+  { path: 'addschool', component: AddSchoolComponent },
+  { path: 'searchschool', component: SearchSchoolComponent }
 ];
 
 @NgModule({

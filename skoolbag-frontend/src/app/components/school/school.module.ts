@@ -19,6 +19,6 @@ import { SchoolRoutingModule } from './school-routing/school-routing.module';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    SchoolRoutingModule ]
+    SchoolRoutingModule]
 })
 export class SchoolModule { }

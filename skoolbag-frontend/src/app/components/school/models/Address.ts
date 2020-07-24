@@ -1,6 +1,6 @@
 export class Address {
     street: string;
     suburb: string;
-    postCode:string;
+    postCode: string;
     state: string;
 }

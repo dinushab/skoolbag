@@ -9,21 +9,21 @@ import { Observable } from 'rxjs';
 })
 export class SchoolService {
 
-  schoolsUrl: string = '/api/v1/schools';
-  searchSchoolsUrl: string = '/api/v1/schools/search';  
+  schoolsUrl = '/api/v1/schools';
+  searchSchoolsUrl = '/api/v1/schools/search';
 
   constructor(private httpService: HttpProviderService) { }
 
-  getSchools():Observable<any> {
+  getSchools(): Observable<any> {
     return this.httpService.getForObject(this.schoolsUrl);
   }
 
   saveSchool(school: School): Observable<any> {
-    return this.httpService.postForObject(this.schoolsUrl, school)
+    return this.httpService.postForObject(this.schoolsUrl, school);
   }
 
-  searchSchool(name:string, address:string): Observable<any> {
-    let url: string = this.searchSchoolsUrl + '?schoolName=' + name + '&address=' + address;
+  searchSchool(name: string, address: string): Observable<any> {
+    const url: string = this.searchSchoolsUrl + '?schoolName=' + name + '&address=' + address;
     return this.httpService.getForObject(url);
   }
 }

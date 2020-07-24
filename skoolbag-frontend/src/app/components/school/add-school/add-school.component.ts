@@ -35,7 +35,7 @@ export class AddSchoolComponent implements OnInit {
     this.buildForm();
   }
 
-  buildForm() {
+  buildForm(): void {
     this.form = this.formBuilder.group({
       schoolName: [null, [Validators.required]],
       noOfStudents: [null, [Validators.required]],
@@ -46,7 +46,7 @@ export class AddSchoolComponent implements OnInit {
     });
   }
 
-  onSubmit(event) {
+  onSubmit(event): void {
     event.preventDefault();
     this.formSubmitted = true;
     if (this.form.valid) {

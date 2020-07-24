@@ -16,7 +16,7 @@ export class ListSchoolsComponent implements OnInit {
 
   ngOnInit(): void {
     this.schoolService.getSchools().subscribe(schools => {
-        this.schools = schools;        
-      });
+      this.schools = schools;
+    });
   }
 }

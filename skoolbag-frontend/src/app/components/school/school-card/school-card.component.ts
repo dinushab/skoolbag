@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { School } from '../models/School';
 
 @Component({
-  selector: 'school-card',
+  selector: 'app-school-card',
   templateUrl: './school-card.component.html',
   styleUrls: ['./school-card.component.css']
 })
