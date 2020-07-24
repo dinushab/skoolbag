@@ -1,0 +1,17 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ school.name }}</h5>
+      <h6 class="card-title">Registered Students: {{ school.noOfStudents}}</h6>
+      <h6 class="card-title"></h6>      
+    <div class="card">
+        <div class="card-header">
+            School address
+        </div>
+        <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">{{school.address.street}}</h6>
+            <p class="card-subtitle mb-2 text-muted">{{school.address.suburb}}, {{school.address.state}}</p>
+            <p class="card-subtitle mb-2 text-muted">{{school.address.postCode}}</p>    
+        </div>
+      </div>
+    </div>
+  </div>

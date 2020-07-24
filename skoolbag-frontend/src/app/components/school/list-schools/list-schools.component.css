@@ -1,0 +1,12 @@
+.mb-5, .my-5 {
+    margin-bottom: 1rem!important;
+}
+
+.mb-5, .my-5 {
+    margin-top: 1rem!important;
+}
+
+.subPanelTitleBar {
+    padding-left: 15px;
+    padding-top: 15px;
+}

@@ -1,0 +1,29 @@
+<h3 class="card-header">
+  Search Schools
+</h3>
+
+<div class="container card-body">
+  <form (ngSubmit)="onSubmit($event)" class="form-inline">
+    <div class="form-group" style="padding: 5px;">
+      <label for="searchSchoolName" class="marginLeft5px">School Name:</label>
+      <input type="text" class="form-control" [(ngModel)]="searchSchoolName"
+        name="searchSchoolName" id="searchSchoolName" 
+        placeholder="search by school name" />
+    </div>
+    <div class="form-group" style="padding: 5px;">
+      <label for="searchSchoolAddress" class="marginLeft5px">Address: </label>
+      <input type="text" class="form-control" [(ngModel)]="searchSchoolAddress"
+        name="searchSchoolAddress" id="searchSchoolAddress" [ngClass]="{'form-submitted': formSubmitted}"
+        placeholder="search by address" />
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </form>
+</div>
+
+<div class="container-fluid row">
+  <div class="col-md-3 my-5" *ngFor="let school of schools">
+    <school-card [school]="school"> </school-card>
+  </div>
+</div>
