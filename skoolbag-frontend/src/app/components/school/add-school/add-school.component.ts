@@ -60,6 +60,7 @@ export class AddSchoolComponent implements OnInit {
     this.schoolService.saveSchool(this.school).subscribe(response => {
       if ('SUCCESS' === response.status) {
         this.toastr.success('New School Added.');
+        this.form.reset();
       } else {
         this.toastr.error('Error occurred.');
       }
